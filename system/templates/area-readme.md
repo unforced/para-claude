@@ -1,17 +1,19 @@
 ---
-type: arena
+type: area
 status: active
 established: {{date}}
+standard: {{what good looks like}}
 review_rhythm: weekly
 last_review: {{date}}
+next_review: {{next review date}}
 health: flourishing
 tags:
-  - arena/active
+  - area/active
 ---
 
 # {{title}}
 
-## The Heart of This Arena
+## The Heart of This Area
 {{Why this space matters in your life}}
 
 ## Flourishing Looks Like
@@ -22,16 +24,16 @@ tags:
 ## Current Season
 {{What's alive in this arena right now}}
 
-## Active Pursuits
-- [[Pursuits/{{Name}}]] - {{How it serves this arena}}
+## Active Projects
+- [[Projects/{{Name}}]] - {{How it serves this area}}
 
 ## Support System
-- [[Relationships/{{Person}}]] - {{Their role in this arena}}
+- [[People/{{Person}}]] - {{Their role in this area}}
 
 ## Rituals & Rhythms
 - **Daily**: {{If applicable}}
 - **Weekly**: {{Regular practice}}
 - **Monthly**: {{Review or maintenance}}
 
-## Arena Notes
+## Area Notes
 - [[Daily/{{date}}]] - Established: {{Initial vision and energy}}

@@ -61,14 +61,14 @@ Areas/Health/
 └── Routines.md
 ```
 
-### Relationship Expansion
+### Person Expansion
 ```
 Before:
-Relationships/Sarah Chen/
+Persons/Sarah Chen/
 └── README.md (many interactions)
 
 After:
-Relationships/Sarah Chen/
+Persons/Sarah Chen/
 ├── README.md (overview)
 ├── Interactions/
 │   └── 2025.md
@@ -115,7 +115,7 @@ See [[CLAUDE.md]] for project-specific help with Spanish learning.
 ```markdown
 # AI Assistance for [Name]
 
-This file provides context for AI tools when working on this [project/area/relationship].
+This file provides context for AI tools when working on this [project/area/person].
 
 ## Context
 [What is this and why it matters]
@@ -137,11 +137,11 @@ This file provides context for AI tools when working on this [project/area/relat
 
 ## Interactive Examples:
 
-### Expanding a Pursuit
+### Expanding a Project
 ```
-You: /expand "Pursuits/Learn Spanish"
+You: /expand "Projects/Learn Spanish"
 
-Claude: I've analyzed your Spanish learning pursuit. You have:
+Claude: I've analyzed your Spanish learning project. You have:
 - 23 progress updates over 2 months
 - 5 mentioned resources
 - 2 practice partners noted
@@ -175,43 +175,43 @@ Claude: Perfect! Creating session-based practice log...
 [Creates structure]
 ```
 
-### Expanding an Arena
+### Expanding an Area
 ```
-You: /expand "Arenas/Health"
+You: /expand "Areas/Health"
 
-Claude: Your Health arena shows:
+Claude: Your Health area shows:
 - Monthly reviews for 6 months
 - Focus on exercise, nutrition, sleep
-- Several linked pursuits
+- Several linked projects
 
-This arena seems well-maintained! Consider:
+This area seems well-maintained! Consider:
 
 1. 📈 Metrics.md - Track key health indicators
 2. 🔄 Routines.md - Document what works
 3. 📅 Review Archive/ - Preserve past insights
-4. 🎯 Active Pursuits.md - Link health goals
+4. 🎯 Active Projects.md - Link health goals
 5. 📝 Experiments.md - Track what you're trying
 
 What matches your needs?
 ```
 
-### Expanding a Relationship
+### Expanding a Person
 ```
-You: /expand "Relationships/Sarah Chen"
+You: /expand "Persons/Sarah Chen"
 
 Claude: Your connection with Sarah includes:
 - 47 interactions over 18 months
 - Professional + personal contexts
-- 3 shared pursuits
+- 3 shared projects
 - Regular coffee meetings
 
 How would you like to deepen this tracking?
 
 1. 📅 Interaction Log/ - Archive conversations
 2. 🎁 Important Dates.md - Never forget
-3. 🤝 Shared Pursuits.md - Collaboration space
+3. 🤝 Shared Projects.md - Collaboration space
 4. 💡 Gift Ideas.md - Thoughtful giving
-5. 📝 Our Story.md - Relationship journey
+5. 📝 Our Story.md - Person journey
 
 Remember: Only track what helps you be a better friend.
 ```
@@ -235,9 +235,9 @@ The command intelligently extracts sections:
 - Avoid premature complexity
 
 ### Intelligent Suggestions
-- For Pursuits: Based on project patterns
-- For Arenas: Based on maintenance needs
-- For Relationships: Based on interaction depth
+- For Projects: Based on project patterns
+- For Areas: Based on maintenance needs
+- For Persons: Based on interaction depth
 - Custom options always available
 
 ### Preserve Intent
@@ -249,19 +249,19 @@ The command intelligently extracts sections:
 
 ## Questions to Ask:
 
-### For Pursuits
-- What phase is this pursuit in?
+### For Projects
+- What phase is this project in?
 - Who else is involved?
 - What resources do you reference?
 - How do you track progress?
 
-### For Arenas
+### For Areas
 - What standards matter here?
 - How often do you review?
 - What patterns have emerged?
-- Which pursuits support this?
+- Which projects support this?
 
-### For Relationships
+### For Persons
 - What contexts do you share?
 - How do you prefer to connect?
 - What would deepen this bond?

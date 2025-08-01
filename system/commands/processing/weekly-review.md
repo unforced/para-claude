@@ -1,6 +1,6 @@
 # /weekly-review - Weekly life review
 
-Review your pursuits, arenas, and relationships to celebrate progress and plan the week ahead.
+Review your projects, areas, and persons to celebrate progress and plan the week ahead.
 
 ## Usage
 ```
@@ -10,9 +10,9 @@ Review your pursuits, arenas, and relationships to celebrate progress and plan t
 ## What this command does:
 
 1. **Reviews your life** across:
-   - Active pursuits and their progress
-   - Arenas and how they're flourishing
-   - Relationships and recent connections
+   - Active projects and their progress
+   - Areas and how they're flourishing
+   - Persons and recent connections
    - Daily notes for unprocessed gems
 
 2. **Identifies patterns**:
@@ -22,15 +22,15 @@ Review your pursuits, arenas, and relationships to celebrate progress and plan t
    - Emerging themes in daily notes
 
 3. **Suggests actions**:
-   - Pursuits to focus on
-   - Arenas needing attention
+   - Projects to focus on
+   - Areas needing attention
    - People to reconnect with
    - Ideas worth exploring
 
 4. **Plans ahead**:
    - This week's priorities
-   - Relationships to nurture
-   - Arenas to tend
+   - Persons to nurture
+   - Areas to tend
    - Time for what matters
 
 ## Weekly Review Template:
@@ -42,47 +42,47 @@ Period: YYYY-MM-DD to YYYY-MM-DD
 Previous: [[Reviews/Weekly/YYYY-WW]]
 Next: [[Reviews/Weekly/YYYY-WW]]
 
-## 🎯 Pursuit Progress
+## 🎯 Project Progress
 
-### Active Pursuits (X total)
+### Active Projects (X total)
 #### High Momentum
-- [[Pursuits/Pursuit Name]] - X% complete
+- [[Projects/Project Name]] - X% complete
   - ✅ Completed: Achievement
   - 🚧 In Progress: Current focus
   - 🎯 Next: Upcoming milestone
 
 #### Needs Attention
-- [[Pursuits/Pursuit Name]] - Blocked/Stalled
+- [[Projects/Project Name]] - Blocked/Stalled
   - ❌ Blocker: Description
   - 💡 Solution: Proposed action
 
 #### Completed This Week
-- [[Pursuits/Pursuit Name]] → Ready to archive
+- [[Projects/Project Name]] → Ready to archive
 
-### Pursuit Metrics
-- Pursuits started: X
+### Project Metrics
+- Projects started: X
 - Milestones reached: X
 - Tasks completed: X
 - Completion rate: X%
 
-## 🏛️ Arena Health Check
+## 🏛️ Area Health Check
 
-### Flourishing (X arenas)
-- [[Arenas/Arena Name]] - Thriving
+### Flourishing (X areas)
+- [[Areas/Area Name]] - Thriving
   - Key win: Description
 
-### Well-Maintained (X arenas)
-- [[Arenas/Arena Name]] - Balanced
+### Well-Maintained (X areas)
+- [[Areas/Area Name]] - Balanced
   - Status: Stable
 
-### Needs Attention (X arenas)
-- [[Arenas/Arena Name]] - Requires care
+### Needs Attention (X areas)
+- [[Areas/Area Name]] - Requires care
   - Gap: What's missing
   - Action: How to improve
 
-### Arena Reviews Due
-- [[Arenas/Arena Name]] - Review scheduled
-- [[Arenas/Arena Name]] - Monthly check-in
+### Area Reviews Due
+- [[Areas/Area Name]] - Review scheduled
+- [[Areas/Area Name]] - Monthly check-in
 
 ## 📝 Daily Notes Analysis
 
@@ -102,21 +102,21 @@ Insights without a home:
 
 ## 📚 Resource Activity
 
-## 👥 Relationship Rhythms
+## 👥 Person Rhythms
 
 ### Connected With (X people)
-- [[Relationships/Person]] - Coffee chat about project
-- [[Relationships/Person]] - Weekly call maintained
-- [[Relationships/Person]] - Collaborated on X
+- [[Persons/Person]] - Coffee chat about project
+- [[Persons/Person]] - Weekly call maintained
+- [[Persons/Person]] - Collaborated on X
 
 ### Need Connection (X people)
-- [[Relationships/Person]] - Last talked: 3 weeks ago
-- [[Relationships/Person]] - Birthday next week
+- [[Persons/Person]] - Last talked: 3 weeks ago
+- [[Persons/Person]] - Birthday next week
 
-### Relationship Insights
+### Person Insights
 - Strong connections: X
 - Needing attention: X
-- New relationships: X
+- New persons: X
 
 ## 🗄️ Archive Candidates
 
@@ -127,7 +127,7 @@ Insights without a home:
 
 ### Inactive Items
 - [[Areas/Area Name]] - No activity in 3 months
-- [[Relationships/Person]] - Lost touch (archive or reconnect?)
+- [[Persons/Person]] - Lost touch (archive or reconnect?)
 
 ## 💡 Insights & Patterns
 
@@ -169,7 +169,7 @@ Insights without a home:
 ### Life Balance Check
 - Projects (Creating): X active
 - Areas (Maintaining): X healthy / X total
-- Relationships (Connecting): X nurtured this week
+- Persons (Connecting): X nurtured this week
 - Daily Notes (Capturing): X days / 7
 
 ### Suggested Adjustments
@@ -215,7 +215,7 @@ Include archived items and auto-generate task list.
 
 ## Implementation Notes:
 
-- Scan Projects, Areas, Relationships folders
+- Scan Projects, Areas, Persons folders
 - Look for recent updates in READMEs
 - Count interactions from daily note links
 - Identify patterns in daily notes

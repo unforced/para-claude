@@ -1,16 +1,16 @@
-# /new-pursuit - Begin a meaningful pursuit
+# /new-project - Begin a meaningful project
 
-Interactively create a new pursuit by understanding your deeper motivation and designing for success.
+Interactively create a new project by understanding your deeper motivation and designing for success.
 
 ## Usage
 ```
-/new-pursuit "Pursuit Name"
+/new-project "Project Name"
 ```
 
 ## Interactive Process:
 
 1. **Understands your why** through thoughtful questions
-2. **Explores connections** to people and arenas
+2. **Explores connections** to people and areas
 3. **Designs for success** based on your style
 4. **Creates simple structure** (just README.md)
 5. **Sets up support** through links and context
@@ -18,14 +18,14 @@ Interactively create a new pursuit by understanding your deeper motivation and d
 ## Questions Asked:
 
 ### Core Motivation
-- What draws you to this pursuit?
+- What draws you to this project?
 - What would success look like?
 - What would completion mean to you?
 
 ### Connections
-- Which arena does this support?
+- Which area does this support?
 - Who might join or support you?
-- What pursuits does this relate to?
+- What projects does this relate to?
 
 ### Design
 - Daily practice or project sprints?
@@ -38,41 +38,41 @@ Based on your answers, creates a personalized structure with rich frontmatter:
 
 ```markdown
 ---
-type: pursuit
+type: project
 status: active
 started: [[Daily/YYYY-MM-DD]]
-arena: [[Arenas/[Arena Name]]]
+area: [[Areas/[Area Name]]]
 tags:
-  - pursuit/active
-  - pursuit/[type: learning|creating|building|exploring]
+  - project/active
+  - project/[type: learning|creating|building|exploring]
   - domain/[specific area]
 energy: high
 progress: 0
 momentum: building
 style: [daily-practice|sprint-based|milestone-driven]
 collaborators:
-  - [[Relationships/Person]]
+  - [[Persons/Person]]
 ---
 
-# [Pursuit Name]
+# [Project Name]
 
 ## The Calling
-[Your deeper reason for this pursuit]
+[Your deeper reason for this project]
 
 ## Vision of Success
 [What completion looks/feels like - customized to your answer]
 
 ## Milestones
-- [ ] [Personalized based on pursuit type]
+- [ ] [Personalized based on project type]
 - [ ] [Matched to your timeline]
 - [ ] [Connected to your why]
 
 ## Support System
-- [[Relationships/Person]] - [How they're involved]
-- [[Pursuits/Related]] - [Connection]
+- [[Persons/Person]] - [How they're involved]
+- [[Projects/Related]] - [Connection]
 
 ## Resources
-- [Key resource based on pursuit type]
+- [Key resource based on project type]
 - [Learning material or tool]
 
 ## Rhythm
@@ -86,9 +86,9 @@ collaborators:
 ## Interactive Example:
 
 ```
-You: /new-pursuit "Write Novel"
+You: /new-project "Write Novel"
 
-Claude: I'd love to help you set up this pursuit thoughtfully.
+Claude: I'd love to help you set up this project thoughtfully.
 
 What draws you to writing a novel?
 1. 🎨 Creative expression - stories demanding to be told
@@ -112,7 +112,7 @@ You: c and d
 
 Claude: I love that - focusing on the journey itself.
 
-Who in your life might support this pursuit?
+Who in your life might support this project?
 (Type names or 'none' or 'not sure')
 
 You: Sarah (she's a writer), Mom (biggest cheerleader)
@@ -127,13 +127,13 @@ What rhythm would work for you?
 
 You: 1
 
-Claude: Perfect! Creating your Novel pursuit with daily practice focus...
+Claude: Perfect! Creating your Novel project with daily practice focus...
 
 [Creates customized README based on all answers]
 
 I've also:
-- Linked to [[Relationships/Sarah]] and [[Relationships/Mom]]
-- Added to [[Arenas/Creative Work]] (created if needed)
+- Linked to [[Persons/Sarah]] and [[Persons/Mom]]
+- Added to [[Areas/Creative Work]] (created if needed)
 - Set up for daily practice tracking
 - Noted this is about joy and transformation
 
@@ -148,9 +148,9 @@ Would you like me to create a CLAUDE.md for writing support?
 - Purpose shapes practice
 
 ### Connect Everything
-- Link to supporting arenas
+- Link to supporting areas
 - Connect with people
-- Reference related pursuits
+- Reference related projects
 
 ### Honor Your Style
 - Daily practice vs. sprints
@@ -166,9 +166,9 @@ Would you like me to create a CLAUDE.md for writing support?
 
 - Ask questions one at a time, conversationally
 - Customize README based on all answers
-- Create arena if mentioned and doesn't exist
-- Link to relationships if mentioned
-- Add creation note: "Started pursuit: [[Pursuits/Name]] - [why]"
+- Create area if mentioned and doesn't exist
+- Link to persons if mentioned
+- Add creation note: "Started project: [[Projects/Name]] - [why]"
 - Generate initial energy/excitement in first log entry
-- Suggest CLAUDE.md for pursuits needing AI support
+- Suggest CLAUDE.md for projects needing AI support
 - Keep the interaction energizing, not overwhelming

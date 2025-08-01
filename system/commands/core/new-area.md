@@ -1,36 +1,36 @@
-# /new-arena - Establish a life arena
+# /new-area - Establish a life area
 
-Interactively create a new arena where life happens, understanding what you want to cultivate in this space.
+Interactively create a new area where life happens, understanding what you want to cultivate in this space.
 
 ## Usage
 ```
-/new-arena "Arena Name"
+/new-area "Area Name"
 ```
 
 ## Interactive Process:
 
-1. **Explores the arena's role** in your life
+1. **Explores the area's role** in your life
 2. **Defines what flourishing looks like** here
-3. **Identifies supporting pursuits** and people
+3. **Identifies supporting projects** and people
 4. **Designs maintenance rhythm** that fits
 5. **Creates simple structure** to begin
 
 ## Questions Asked:
 
-### Arena Purpose
-- Why does this arena matter to you?
+### Area Purpose
+- Why does this area matter to you?
 - What does success look like here?
 - What would neglect cost you?
 
 ### Standards & Rhythms
 - What standards will you maintain?
 - How often does this need attention?
-- What rituals support this arena?
+- What rituals support this area?
 
 ### Connections
-- Which pursuits serve this arena?
+- Which projects serve this area?
 - Who helps you maintain this?
-- What arenas does this support?
+- What areas does this support?
 
 ## Customized README Template:
 
@@ -38,7 +38,7 @@ Based on your answers, creates a living document with rich frontmatter:
 
 ```markdown
 ---
-type: arena
+type: area
 status: active
 established: [[Daily/YYYY-MM-DD]]
 review_rhythm: [daily|weekly|monthly|quarterly]
@@ -46,16 +46,16 @@ last_review: [[Daily/YYYY-MM-DD]]
 next_review: [[Daily/YYYY-MM-DD]]
 health: flourishing
 tags:
-  - arena/active
-  - arena/[foundation|growth|expression|connection]
+  - area/active
+  - area/[foundation|growth|expression|connection]
   - focus/[specific aspects]
 focus_level: high
-active_pursuits: 0
+active_projects: 0
 ---
 
-# [Arena Name]
+# [Area Name]
 
-## The Heart of This Arena
+## The Heart of This Area
 [Why this space matters - from your answer]
 
 ## Flourishing Looks Like
@@ -67,16 +67,16 @@ active_pursuits: 0
 ## Current Season
 [Initial state/energy/focus]
 
-## Active Pursuits
-- [[Pursuits/...]] - [How it serves this arena]
+## Active Projects
+- [[Projects/...]] - [How it serves this area]
 
 ## Support System
-- [[Relationships/Person]] - [Their role here]
+- [[Persons/Person]] - [Their role here]
 
 ## Rituals & Rhythms
 [Daily/Weekly/Monthly practices you mentioned]
 
-## Arena Notes
+## Area Notes
 - [[Daily/YYYY-MM-DD]] - Established: [Initial intentions]
 ```
 
@@ -84,7 +84,7 @@ active_pursuits: 0
 
 Reviews become part of the story:
 ```markdown
-## Arena Notes
+## Area Notes
 - [[Daily/2025-02-28]] - Monthly check: [What's alive, what needs care]
 - [[Daily/2025-01-28]] - Established: [Original vision]
 ```
@@ -92,9 +92,9 @@ Reviews become part of the story:
 ## Interactive Example:
 
 ```
-You: /new-arena "Creative Work"
+You: /new-area "Creative Work"
 
-Claude: Let's establish this arena thoughtfully.
+Claude: Let's establish this area thoughtfully.
 
 What role does Creative Work play in your life?
 1. 💡 Self-expression - where I become myself
@@ -107,14 +107,14 @@ You: 1 and 4
 
 Claude: Beautiful - creation as both self-discovery and service.
 
-What does flourishing look like in this arena?
+What does flourishing look like in this area?
 (Share 2-3 standards you want to maintain)
 
 You: Regular creative practice, finishing projects, sharing work
 
 Claude: Those are powerful standards. 
 
-How often does this arena need your attention?
+How often does this area need your attention?
 1. Daily - creativity is life force
 2. Weekly - regular creative sessions
 3. Bi-weekly - consistent check-ins
@@ -124,8 +124,8 @@ You: 2
 
 Claude: Weekly rhythm it is.
 
-Any current pursuits serving this arena?
-(List pursuits or 'none yet')
+Any current projects serving this area?
+(List projects or 'none yet')
 
 You: Write Novel, Launch Podcast
 
@@ -136,46 +136,46 @@ Who supports your creative work?
 
 You: Sarah (creative partner), Local writing group
 
-Claude: Creating your Creative Work arena...
+Claude: Creating your Creative Work area...
 
 [Creates customized README with frontmatter including:]
-- Tags: #arena/expression #focus/creativity #focus/professional #growth/artistic
+- Tags: #area/expression #focus/creativity #focus/professional #growth/artistic
 - Review rhythm: Weekly (from your answer)
 - Health: Starting as "flourishing" with high energy
-- Active pursuits: 2 (novel and podcast)
+- Active projects: 2 (novel and podcast)
 
-I've established this arena with:
+I've established this area with:
 - Focus on self-expression and contribution
 - Weekly rhythm for creative sessions  
-- Links to your novel and podcast pursuits
+- Links to your novel and podcast projects
 - Connection to Sarah and writing group
 
 Would you like suggestions for rituals that support creative work?
 ```
 
-## Tag Emergence for Arenas:
+## Tag Emergence for Areas:
 
-Based on how you describe the arena, natural tags emerge:
+Based on how you describe the area, natural tags emerge:
 
-### Foundation Arenas
-- "Health" → #arena/foundation #focus/physical #focus/mental
-- "Home" → #arena/foundation #focus/environment #focus/sanctuary
-- "Finances" → #arena/foundation #focus/security #focus/resources
+### Foundation Areas
+- "Health" → #area/foundation #focus/physical #focus/mental
+- "Home" → #area/foundation #focus/environment #focus/sanctuary
+- "Finances" → #area/foundation #focus/security #focus/resources
 
-### Growth Arenas
-- "Learning" → #arena/growth #focus/curiosity #focus/skills
-- "Career" → #arena/growth #focus/professional #focus/impact
-- "Personal Development" → #arena/growth #focus/self #focus/habits
+### Growth Areas
+- "Learning" → #area/growth #focus/curiosity #focus/skills
+- "Career" → #area/growth #focus/professional #focus/impact
+- "Personal Development" → #area/growth #focus/self #focus/habits
 
-### Expression Arenas
-- "Creative Work" → #arena/expression #focus/creativity #focus/art
-- "Writing" → #arena/expression #focus/words #focus/communication
-- "Making" → #arena/expression #focus/craft #focus/building
+### Expression Areas
+- "Creative Work" → #area/expression #focus/creativity #focus/art
+- "Writing" → #area/expression #focus/words #focus/communication
+- "Making" → #area/expression #focus/craft #focus/building
 
-### Connection Arenas
-- "Family" → #arena/connection #focus/family #focus/roots
-- "Community" → #arena/connection #focus/service #focus/belonging
-- "Friendships" → #arena/connection #focus/social #focus/support
+### Connection Areas
+- "Family" → #area/connection #focus/family #focus/roots
+- "Community" → #area/connection #focus/service #focus/belonging
+- "Friendships" → #area/connection #focus/social #focus/support
 
 ## Growth Pattern:
 
@@ -184,7 +184,7 @@ Based on how you describe the arena, natural tags emerge:
 **Month 12**: Complex enough → run `/expand "Areas/Health"`
 **Result**: Now has Reviews/ folder, Metrics.md, etc.
 
-## Common Arenas:
+## Common Areas:
 
 ### Personal Foundation
 - **Health** - Physical, mental, emotional wellbeing
@@ -197,23 +197,23 @@ Based on how you describe the arena, natural tags emerge:
 - **Career** - Professional contribution
 
 ### Connection & Meaning
-- **Family** - Close family relationships
+- **Family** - Close family persons
 - **Community** - Broader connections
 - **Spirituality** - Meaning and transcendence
 
-### Custom Arenas
-Don't feel limited! Create arenas like:
+### Custom Areas
+Don't feel limited! Create areas like:
 - **Adventure** - Travel and exploration
 - **Play** - Fun and recreation
 - **Service** - Giving back
 
 ## Design Principles:
 
-### Arena vs. Pursuit
-- Arenas are ongoing stages of life
-- Pursuits have completion points
-- Arenas spawn pursuits
-- Pursuits serve arenas
+### Area vs. Project
+- Areas are ongoing stages of life
+- Projects have completion points
+- Areas spawn projects
+- Projects serve areas
 
 ### Interactive Creation
 - Understand the deeper purpose
@@ -222,7 +222,7 @@ Don't feel limited! Create arenas like:
 - Link to support systems
 
 ### Living Documents
-- README grows with arena notes
+- README grows with area notes
 - Reviews add to the story
 - Standards evolve with life
 - Connections deepen over time
@@ -231,7 +231,7 @@ Don't feel limited! Create arenas like:
 
 - Guide through questions conversationally
 - Create rich, personalized README
-- Link to mentioned pursuits/relationships
-- Add note: "Established arena: [[Arenas/Name]] - [purpose]"
-- Suggest rituals based on arena type
-- Offer to connect related arenas
+- Link to mentioned projects/persons
+- Add note: "Established area: [[Areas/Name]] - [purpose]"
+- Suggest rituals based on area type
+- Offer to connect related areas

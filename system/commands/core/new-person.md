@@ -1,10 +1,10 @@
-# /new-relationship - Begin tracking a meaningful connection
+# /new-person - Begin tracking a meaningful connection
 
-Interactively create a relationship file to intentionally cultivate connections with people.
+Interactively create a person file to intentionally cultivate connections with people.
 
 ## Usage
 ```
-/new-relationship "Person Name"
+/new-person "Person Name"
 ```
 
 ## Interactive Process:
@@ -16,7 +16,7 @@ Interactively create a relationship file to intentionally cultivate connections 
 5. **Sets up for natural growth** through interactions
 
 ## Philosophy
-- **People deserve intentionality** - Track connections like projects
+- **People as infrastructure** - Track connections like projects
 - **Flexible, not categorical** - Use tags that fit your life
 - **Context over categories** - How you connect matters more than labels
 - **Privacy first** - Only track what helps you be present
@@ -35,21 +35,21 @@ Interactively create a relationship file to intentionally cultivate connections 
 
 ### Shared Ground
 - What interests do you share?
-- Which pursuits might involve them?
-- What arenas connect you?
+- Which projects might involve them?
+- What areas connect you?
 
 ## Dynamic README Template:
 
 ```markdown
 ---
-type: relationship
+type: person
 status: active
 met: [[Daily/YYYY-MM-DD]]
 last_interaction: [[Daily/YYYY-MM-DD]]
 connection_strength: growing
 tags:
-  - relationship/active
-  - relationship/[suggested contexts like: collaborator, mentor, friend, neighbor]
+  - person/active
+  - person/[suggested contexts like: collaborator, mentor, friend, neighbor]
   - context/[specific contexts like: work, hobby, community]
 important_dates:
   - birthday: 
@@ -70,7 +70,7 @@ communication_preferences:
 ## Shared Context
 - [Specific contexts you mentioned]
 - [Common interests discussed]
-- [Shared pursuits or arenas]
+- [Shared projects or areas]
 
 ## Important to Remember
 - [Something they care about]
@@ -87,7 +87,7 @@ communication_preferences:
 ## Interactive Example:
 
 ```
-You: /new-relationship "Sarah Chen"
+You: /new-person "Sarah Chen"
 
 Claude: I'd love to help you track this connection thoughtfully.
 
@@ -122,12 +122,12 @@ Claude: Perfect. How often do you typically connect?
 
 You: Usually every 2-3 weeks for coffee, more often when we have active projects
 
-Claude: Creating Sarah's relationship file...
+Claude: Creating Sarah's person file...
 
 I've set up tracking with:
-- Tags: #relationship/collaborator #context/design #context/creative #learning-partner
+- Tags: #person/collaborator #context/design #context/creative #learning-partner
 - Interaction rhythm noted as bi-weekly coffee + project-based
-- Added to your Creative Work arena
+- Added to your Creative Work area
 - Ready to log your shared projects
 
 Would you like to add any important dates (birthday, work anniversary)?
@@ -135,24 +135,24 @@ Would you like to add any important dates (birthday, work anniversary)?
 
 ## Tag Suggestions Based on Context:
 
-The command suggests natural tags based on how you describe the relationship:
+The command suggests natural tags based on how you describe the person:
 
 ### Professional Contexts
-- "colleague" → #relationship/colleague #context/work
-- "mentor" → #relationship/mentor #growth/professional
-- "client" → #relationship/client #context/business
-- "collaborator" → #relationship/collaborator #context/projects
+- "colleague" → #person/colleague #context/work
+- "mentor" → #person/mentor #growth/professional
+- "client" → #person/client #context/business
+- "collaborator" → #person/collaborator #context/projects
 
 ### Personal Contexts  
-- "friend from hobby" → #relationship/friend #context/[hobby]
-- "neighbor" → #relationship/neighbor #context/community
-- "gym buddy" → #relationship/friend #context/fitness
-- "book club" → #relationship/friend #context/reading
+- "friend from hobby" → #person/friend #context/[hobby]
+- "neighbor" → #person/neighbor #context/community
+- "gym buddy" → #person/friend #context/fitness
+- "book club" → #person/friend #context/reading
 
 ### Growth Contexts
-- "accountability partner" → #relationship/growth-partner
-- "study buddy" → #relationship/learning-partner
-- "creative collaborator" → #relationship/collaborator #context/creative
+- "accountability partner" → #person/growth-partner
+- "study buddy" → #person/learning-partner
+- "creative collaborator" → #person/collaborator #context/creative
 
 ### Multi-Context (most realistic)
 - "Friend who became business partner" → Multiple relevant tags
@@ -161,7 +161,7 @@ The command suggests natural tags based on how you describe the relationship:
 
 ## Interaction Patterns:
 
-After meetings/calls, update the relationship:
+After meetings/calls, update the person:
 ```markdown
 ## Interactions
 - [[Daily/2025-01-28]] - Coffee chat, discussed her new design role
@@ -176,7 +176,7 @@ After meetings/calls, update the relationship:
 **Month 6**: Rich interaction history
 **Year 1**: Deep understanding of connection patterns
 
-When complex → `/expand "Relationships/Sarah Chen"` for:
+When complex → `/expand "Persons/Sarah Chen"` for:
 - Separate interaction log
 - Shared projects tracking
 - Gift ideas list
@@ -200,9 +200,9 @@ When complex → `/expand "Relationships/Sarah Chen"` for:
 
 ## Implementation Notes:
 
-- Check if relationship already exists
+- Check if person already exists
 - Support variations of names (nicknames, formal names)
-- Add to daily note: "Created relationship: [[Relationships/Person Name]]"
+- Add to daily note: "Created person: [[Persons/Person Name]]"
 - Consider prompting for birthday/important dates
-- Tag appropriately for relationship reviews
+- Tag appropriately for person reviews
 - Maybe suggest adding to relevant Area (e.g., "Family" area)

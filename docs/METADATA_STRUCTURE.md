@@ -9,40 +9,40 @@ This document defines the frontmatter fields used across Para-Claude to enable r
 - **Navigation over categorization** - Find things naturally
 - **Human-readable** - Fields make sense at a glance
 
-## Pursuit Metadata
+## Project Metadata
 
 ```yaml
 ---
-type: pursuit
+type: project
 status: active|paused|completed|archived
 started: YYYY-MM-DD
 completed: YYYY-MM-DD (when applicable)
-arena: [[Arenas/Name]] (which arena this serves)
+area: [[Areas/Name]] (which area this serves)
 tags:
-  - pursuit/active
-  - pursuit/learning (or creating, building, etc.)
+  - project/active
+  - project/learning (or creating, building, etc.)
   - domain/specific (like tech, health, creative)
 energy: high|medium|low|dormant
 progress: 0-100 (percentage)
 momentum: building|steady|slowing|stalled
 collaborators:
-  - [[Relationships/Person]]
+  - [[People/Person]]
 ---
 ```
 
 ### Key Fields Explained
 
-- **status**: Current state of the pursuit
-- **arena**: Links pursuit to the life area it serves
+- **status**: Current state of the project
+- **area**: Links project to the life area it serves
 - **energy**: Your current enthusiasm/capacity
 - **momentum**: Direction of progress
-- **collaborators**: People involved in this pursuit
+- **collaborators**: People involved in this project
 
-## Arena Metadata
+## Area Metadata
 
 ```yaml
 ---
-type: arena
+type: area
 status: active|dormant|archived  
 established: YYYY-MM-DD
 review_rhythm: daily|weekly|monthly|quarterly
@@ -50,25 +50,25 @@ last_review: YYYY-MM-DD
 next_review: YYYY-MM-DD
 health: thriving|flourishing|maintained|struggling|neglected
 tags:
-  - arena/active
-  - arena/foundation (or growth, expression, connection)
+  - area/active
+  - area/foundation (or growth, expression, connection)
 focus_level: high|balanced|low
-active_pursuits: 3 (count)
+active_projects: 3 (count)
 ---
 ```
 
 ### Key Fields Explained
 
 - **review_rhythm**: How often you check in
-- **health**: Current state of the arena
+- **health**: Current state of the area
 - **focus_level**: Current attention level
-- **active_pursuits**: Number of pursuits serving this arena
+- **active_projects**: Number of projects serving this area
 
-## Relationship Metadata
+## Person Metadata
 
 ```yaml
 ---
-type: relationship
+type: person
 status: active|dormant|archived
 met: YYYY-MM-DD
 last_interaction: YYYY-MM-DD
@@ -87,8 +87,8 @@ important_dates:
 shared_interests:
   - interest1
   - interest2
-shared_pursuits:
-  - [[Pursuits/Name]]
+shared_projects:
+  - [[Projects/Name]]
 communication_preferences:
   - coffee|calls|texts|emails
   - mornings|evenings|weekends
@@ -101,7 +101,7 @@ communication_preferences:
 - **interaction_frequency**: Natural rhythm
 - **tags**: Flexible contexts, not rigid categories
 - **energy**: How interactions typically feel
-- **shared_pursuits**: Active collaborations
+- **shared_projects**: Active collaborations
 
 ## Navigation Patterns
 
@@ -117,48 +117,48 @@ communication_preferences:
 ### By Time
 - `last_interaction: <2w` - Recent connections
 - `next_review: <1w` - Upcoming reviews
-- `started: >6mo` - Long-running pursuits
+- `started: >6mo` - Long-running projects
 
 ### By Health/Strength
-- `health: struggling` - Arenas needing care
+- `health: struggling` - Areas needing care
 - `connection_strength: fading` - Relationships to nurture
 
 ### By Context Tags
 - `#context/work` - Professional connections
 - `#context/creative` - Creative collaborators
-- `#domain/health` - Health-related pursuits
+- `#domain/health` - Health-related projects
 
 ## Dataview Query Examples
 
-### Active Pursuits by Arena
+### Active Projects by Area
 ```dataview
 TABLE 
   energy as "Energy",
   progress as "Progress",
   momentum as "Momentum"
-FROM "Pursuits"
+FROM "Projects"
 WHERE status = "active"
-SORT arena ASC, energy DESC
+SORT area ASC, energy DESC
 ```
 
-### Relationships Needing Attention
+### People Needing Attention
 ```dataview
 TABLE
   last_interaction as "Last Contact",
   connection_strength as "Strength",
   shared_interests as "Common Ground"
-FROM "Relationships"  
+FROM "People"  
 WHERE last_interaction < date(today) - dur(30 days)
 SORT last_interaction ASC
 ```
 
-### Arena Health Dashboard
+### Area Health Dashboard
 ```dataview
 TABLE
   health as "Health",
   last_review as "Last Review",
-  active_pursuits as "Active Pursuits"
-FROM "Arenas"
+  active_projects as "Active Projects"
+FROM "Areas"
 WHERE status = "active"
 SORT health ASC
 ```
@@ -167,23 +167,23 @@ SORT health ASC
 
 Tags should emerge from your use, but here are patterns that work:
 
-### Pursuit Tags
-- `pursuit/learning` - Skill acquisition
-- `pursuit/creating` - Making something
-- `pursuit/building` - Constructing/developing
-- `pursuit/exploring` - Discovery-based
+### Project Tags
+- `project/learning` - Skill acquisition
+- `project/creating` - Making something
+- `project/building` - Constructing/developing
+- `project/exploring` - Discovery-based
 
-### Arena Tags  
-- `arena/foundation` - Health, Home, Finance
-- `arena/growth` - Learning, Career, Skills
-- `arena/expression` - Creative, Professional
-- `arena/connection` - Relationships, Community
+### Area Tags  
+- `area/foundation` - Health, Home, Finance
+- `area/growth` - Learning, Career, Skills
+- `area/expression` - Creative, Professional
+- `area/connection` - Relationships, Community
 
-### Relationship Tags
-- `relationship/collaborator` - Active co-creation
-- `relationship/mentor` - Growth guide
-- `relationship/peer` - Equal exchange
-- `relationship/supporter` - Cheerleader
+### Person Tags
+- `person/collaborator` - Active co-creation
+- `person/mentor` - Growth guide
+- `person/peer` - Equal exchange
+- `person/supporter` - Cheerleader
 
 ### Context Tags
 - `context/work` - Professional

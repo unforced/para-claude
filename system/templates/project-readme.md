@@ -1,18 +1,19 @@
 ---
-type: pursuit
+type: project
 status: active
 started: {{date}}
-arena: 
+deadline: {{deadline}}
+area: 
 tags:
-  - pursuit/active
+  - project/active
 energy: high
 progress: 0
 ---
 
 # {{title}}
 
-## The Calling
-{{Why this pursuit matters to you}}
+## Outcome
+{{Clear desired outcome for this project}}
 
 ## Vision of Success
 {{What completion looks and feels like}}
@@ -23,8 +24,8 @@ progress: 0
 - [ ] {{Completion criteria}}
 
 ## Support System
-- [[Relationships/{{Person}}]] - {{How they support this}}
-- [[Pursuits/{{Related}}]] - {{Connection}}
+- [[People/{{Person}}]] - {{How they support this}}
+- [[Projects/{{Related}}]] - {{Connection}}
 
 ## Resources
 - {{Key resource or tool}}

@@ -4,12 +4,13 @@ An intentional life operating system that transforms your Obsidian vault into a 
 
 ## What is Para-Claude?
 
-Para-Claude reimagines personal knowledge management as a conversation. Instead of rigid folders and tags, you have:
+Para-Claude reimagines personal knowledge management as a conversation. Based on the proven PARA method, you have:
 
-- **Pursuits** - Meaningful quests you're actively choosing
-- **Arenas** - Life spaces where you show up and grow  
-- **Relationships** - People as core infrastructure, not afterthoughts
-- **Archives** - Completed journeys with wisdom preserved
+- **Projects** - Active work with clear outcomes and deadlines
+- **Areas** - Ongoing responsibilities you maintain
+- **Resources** - Reference materials and tools for your work
+- **Archives** - Inactive items preserved for reference
+- **People** - Relationships as core infrastructure, not afterthoughts
 
 Every interaction is designed to understand your intent, not just organize your information.
 
@@ -17,9 +18,9 @@ Every interaction is designed to understand your intent, not just organize your 
 
 ### 🎯 Conversational Commands
 ```
-You: /new-pursuit "Write Novel"
+You: /new-project "Write Novel"
 
-Claude: I'd love to help you set up this pursuit thoughtfully.
+Claude: I'd love to help you set up this project thoughtfully.
         What draws you to writing a novel?
         
         1. Creative expression - stories demanding to be told
@@ -35,18 +36,18 @@ You: /process-daily
 
 Claude: I found several interesting patterns in today's note:
 
-        🎯 Potential new pursuit:
+        🎯 Potential new project:
         "Thinking about starting a podcast" (mentioned 3x this month)
-        → Would you like to create [[Pursuits/Podcast Launch]]?
+        → Would you like to create [[Projects/Podcast Launch]]?
 
         💫 New connection:
         "Coffee with Amy - great energy about design"
-        → Create [[Relationships/Amy Chen]]?
+        → Create [[People/Amy Chen]]?
 ```
 
-### 👥 Relationship Intelligence
+### 👥 People Intelligence
 ```
-You: /relationship-check
+You: /people-check
 
 Claude: 💛 Sarah - Strong connection, regular coffee chats
         ⚠️ Mom - Haven't talked in 2 weeks (usually weekly)
@@ -66,7 +67,7 @@ cd para-claude
 ./install.sh /path/to/your/obsidian/vault
 
 # Start creating
-/new-pursuit "Your first meaningful quest"
+/new-project "Your first meaningful project"
 ```
 
 ## 📋 Requirements
@@ -83,7 +84,7 @@ We believe:
 - **Questions > Categories** - Understanding intent matters more than filing
 - **People > Productivity** - Relationships are infrastructure
 - **Growth > Management** - Your system should evolve with you
-- **Meaning > Efficiency** - Choose pursuits that matter
+- **Meaning > Efficiency** - Choose projects that matter
 
 ## 📦 What's Included
 
@@ -138,10 +139,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 - ✅ Basic intelligence
 - ✅ Easy installation
 
-### Next (v0.2)
-- 🔄 Smarter daily processing
-- 🔄 Pattern learning
-- 🔄 Deeper relationship features
+### Current (v0.2)
+- ✅ Standard PARA implementation
+- ✅ Resources functionality
+- ✅ Enhanced people tracking
+- ✅ Improved command structure
 
 ### Future
 - 💭 Visual relationship maps

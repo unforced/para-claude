@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Version
-VERSION="0.1.0"
+VERSION="0.1.1"
 
 # Default values
 INSTALL_TYPE="full"
@@ -74,13 +74,17 @@ create_folders() {
     
     echo "Creating folder structure..."
     
-    # Main folders
-    mkdir -p "$vault_path/Pursuits"
-    mkdir -p "$vault_path/Arenas"
-    mkdir -p "$vault_path/Relationships"
-    mkdir -p "$vault_path/Archives/Pursuits"
-    mkdir -p "$vault_path/Archives/Arenas"
-    mkdir -p "$vault_path/Archives/Relationships"
+    # PARA structure
+    mkdir -p "$vault_path/Projects"
+    mkdir -p "$vault_path/Areas"
+    mkdir -p "$vault_path/Resources"
+    mkdir -p "$vault_path/Archives"
+    
+    # People (separate from PARA)
+    mkdir -p "$vault_path/People"
+    
+    # Daily notes
+    mkdir -p "$vault_path/Daily"
     
     # Claude commands folder (if local)
     if [ "$COMMAND_LOCATION" = "local" ]; then
@@ -94,15 +98,12 @@ create_folders() {
 install_claude_files() {
     local vault_path="$1"
     
-    echo "Installing CLAUDE.md files..."
+    echo "Installing CLAUDE.md file..."
     
-    # Copy CLAUDE.md files
+    # Copy single CLAUDE.md file to vault root
     cp "$SCRIPT_DIR/system/claude-context/vault-root.md" "$vault_path/CLAUDE.md"
-    cp "$SCRIPT_DIR/system/claude-context/pursuits.md" "$vault_path/Pursuits/CLAUDE.md"
-    cp "$SCRIPT_DIR/system/claude-context/arenas.md" "$vault_path/Arenas/CLAUDE.md"
-    cp "$SCRIPT_DIR/system/claude-context/relationships.md" "$vault_path/Relationships/CLAUDE.md"
     
-    print_success "Installed CLAUDE.md files"
+    print_success "Installed CLAUDE.md file"
 }
 
 # Install commands
@@ -143,35 +144,43 @@ Your intentional life operating system is now installed and ready to help you th
 
 ## 🚀 Quick Start
 
-### Your First Pursuit
-Try creating your first pursuit - something meaningful you want to achieve:
+### Your First Project
+Try creating your first project - something with a clear outcome:
 
 ```
-/new-pursuit "Learn Guitar"
+/new-project "Learn Guitar"
 ```
 
-Claude will ask you thoughtful questions to understand your motivation and help design your path.
+Claude will ask you thoughtful questions to understand your motivation and deadline.
 
-### Create an Arena
-Establish a life area that needs ongoing attention:
+### Establish an Area
+Set up an ongoing area of responsibility:
 
 ```
-/new-arena "Health"
+/new-area "Health"
 ```
 
-### Track a Relationship
+### Add a Resource
+Capture something useful for reference:
+
+```
+/new-resource "Guitar Learning Guide"
+```
+
+### Track a Person
 Start being intentional about important connections:
 
 ```
-/new-relationship "Best Friend's Name"
+/new-person "Best Friend's Name"
 ```
 
 ## 📚 Core Concepts
 
-- **Pursuits** - Meaningful quests with outcomes (projects with soul)
-- **Arenas** - Life spaces requiring ongoing attention (areas of responsibility)
-- **Relationships** - People as infrastructure (intentional connections)
-- **Archives** - Completed journeys with preserved wisdom
+- **Projects** - Active work with clear outcomes and deadlines
+- **Areas** - Ongoing responsibilities you maintain to a standard
+- **Resources** - Reference materials that support your work
+- **Archives** - Inactive items preserved for reference
+- **People** - The humans who matter in your life (separate from PARA)
 
 ## 🎯 Daily Workflow
 
@@ -247,12 +256,93 @@ install() {
 # Update existing installation
 update() {
     local vault_path="$1"
+    local config_file="$vault_path/.para-claude/config.yml"
+    local current_version=""
     
-    print_warning "Update functionality coming in v0.2.0"
-    echo "For now, please:"
-    echo "1. Back up your vault"
-    echo "2. Run install.sh again"
-    echo "3. Your content will be preserved"
+    # Check current version
+    if [ -f "$config_file" ]; then
+        current_version=$(grep "version:" "$config_file" | cut -d' ' -f2)
+    else
+        print_warning "No existing installation found"
+        return 1
+    fi
+    
+    echo "Current version: $current_version"
+    echo "Latest version: $VERSION"
+    
+    if [ "$current_version" = "$VERSION" ]; then
+        print_success "Already up to date!"
+        return 0
+    fi
+    
+    # Backup current installation
+    echo ""
+    echo "Backing up current installation..."
+    local backup_dir="$vault_path/.para-claude/backups/$(date +%Y%m%d_%H%M%S)"
+    mkdir -p "$backup_dir"
+    
+    # Backup CLAUDE.md files
+    if [ -f "$vault_path/CLAUDE.md" ]; then
+        cp "$vault_path/CLAUDE.md" "$backup_dir/"
+    fi
+    for dir in Projects Areas Resources Archives People; do
+        if [ -f "$vault_path/$dir/CLAUDE.md" ]; then
+            mkdir -p "$backup_dir/$dir"
+            cp "$vault_path/$dir/CLAUDE.md" "$backup_dir/$dir/"
+        fi
+    done
+    
+    # Backup commands if local
+    if [ -d "$vault_path/.claude/commands" ]; then
+        cp -r "$vault_path/.claude/commands" "$backup_dir/"
+    fi
+    
+    print_success "Backup created at $backup_dir"
+    
+    # Update files
+    echo ""
+    echo "Updating Para-Claude..."
+    
+    # Update CLAUDE.md files
+    install_claude_files "$vault_path"
+    
+    # Update commands
+    install_commands "$vault_path"
+    
+    # Update config version
+    if command -v sed >/dev/null 2>&1; then
+        sed -i.bak "s/version: .*/version: $VERSION/" "$config_file"
+        rm -f "$config_file.bak"
+    else
+        # Fallback for systems without sed -i
+        mv "$config_file" "$config_file.bak"
+        awk -v ver="$VERSION" '/^version:/ {print "version: " ver; next} {print}' "$config_file.bak" > "$config_file"
+        rm -f "$config_file.bak"
+    fi
+    
+    # Show what changed
+    echo ""
+    print_success "Updated from $current_version to $VERSION"
+    
+    # Version-specific update notes
+    case "$VERSION" in
+        "0.1.1")
+            echo ""
+            echo "Changes in v0.1.1:"
+            echo "- Made /process-daily interactive and consent-based"
+            echo "- Enhanced metadata structure for all entities"
+            echo "- Added flexible tagging system"
+            ;;
+        *)
+            echo "See changelog for details"
+            ;;
+    esac
+    
+    echo ""
+    echo "✨ Update complete!"
+    echo ""
+    echo "Note: Your content (Projects, Areas, Resources, Archives, People) was not modified."
+    echo "Backups are available at: $backup_dir"
 }
 
 # Uninstall
@@ -260,17 +350,14 @@ uninstall() {
     local vault_path="$1"
     
     echo "This will remove Para-Claude system files."
-    echo "Your content (Pursuits, Arenas, Relationships) will be preserved."
+    echo "Your content (Projects, Areas, Resources, Archives, People) will be preserved."
     echo ""
     read -p "Continue? [y/N]: " -n 1 -r
     echo ""
     
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        # Remove CLAUDE.md files
+        # Remove CLAUDE.md file
         rm -f "$vault_path/CLAUDE.md"
-        rm -f "$vault_path/Pursuits/CLAUDE.md"
-        rm -f "$vault_path/Arenas/CLAUDE.md"
-        rm -f "$vault_path/Relationships/CLAUDE.md"
         
         # Remove commands (if local)
         if [ -d "$vault_path/.claude/commands" ]; then
@@ -463,7 +550,7 @@ case $INSTALL_TYPE in
         if [ "$INSTALL_TYPE" != "minimal" ]; then
             echo "2. Read 'Welcome to Para-Claude.md'"
         fi
-        echo "3. Try: /new-pursuit \"Your first pursuit\""
+        echo "3. Try: /new-project \"Your first project\""
         echo ""
         echo "Need help? Visit: https://github.com/yourusername/para-claude"
         ;;

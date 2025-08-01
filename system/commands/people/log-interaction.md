@@ -1,6 +1,6 @@
-# /log-interaction - Quick relationship update
+# /log-interaction - Quick person update
 
-Quickly log an interaction with someone, creating their relationship file if needed.
+Quickly log an interaction with someone, creating their person file if needed.
 
 ## Usage
 ```
@@ -9,17 +9,17 @@ Quickly log an interaction with someone, creating their relationship file if nee
 
 ## What this command does:
 
-1. **Checks if relationship exists** - creates if missing
+1. **Checks if person exists** - creates if missing
 2. **Adds interaction** to their README.md
 3. **Links to today's daily note** for context
-4. **Updates daily note** with relationship link
+4. **Updates daily note** with person link
 5. **Maintains chronological order** of interactions
 
 ## Philosophy
 - **Friction-free capture** - Log interactions in seconds
 - **Build history naturally** - Each interaction adds depth
 - **Context preserved** - Links maintain full story
-- **People-first design** - Relationships are infrastructure
+- **People-first design** - Persons are infrastructure
 
 ## Examples:
 
@@ -27,7 +27,7 @@ Quickly log an interaction with someone, creating their relationship file if nee
 ```
 /log-interaction "Sarah Chen" "Coffee chat about her new design role"
 ```
-Result in `Relationships/Sarah Chen/README.md`:
+Result in `Persons/Sarah Chen/README.md`:
 ```markdown
 ## Interactions
 - [[Daily/2025-01-28]] - Coffee chat about her new design role
@@ -50,7 +50,7 @@ Result in `Relationships/Sarah Chen/README.md`:
 
 ## Auto-Creation
 
-If relationship doesn't exist, creates minimal README:
+If person doesn't exist, creates minimal README:
 ```markdown
 # Person Name
 
@@ -78,7 +78,7 @@ After a busy day, quickly log multiple interactions:
 
 - **Name matching**: Handles variations (Bob = Robert)
 - **Context extraction**: Pulls out key topics
-- **Relationship hints**: Suggests adding to areas
+- **Person hints**: Suggests adding to areas
 - **Commitment tracking**: Highlights promises made
 - **Follow-up flags**: Notes requiring action
 
@@ -104,7 +104,7 @@ When you make promises:
 ```
 /log-interaction "John" "Offered to review his portfolio - DUE: Friday"
 ```
-This could auto-create a task linked to the relationship.
+This could auto-create a task linked to the person.
 
 ## Privacy Notes:
 
@@ -115,10 +115,10 @@ This could auto-create a task linked to the relationship.
 
 ## Implementation Notes:
 
-- Fuzzy match on names to find existing relationships
+- Fuzzy match on names to find existing persons
 - Support first-name-only for frequent contacts
 - Auto-append to Interactions section
 - Handle multiple interactions per day gracefully
 - Add interaction count to daily summary
 - Consider extracting commitments/todos
-- Maybe analyze sentiment/relationship health over time
+- Maybe analyze sentiment/person health over time

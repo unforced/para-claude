@@ -1,12 +1,12 @@
 ---
-type: relationship
+type: person
 status: active
 met: {{date}}
 last_interaction: {{date}}
 connection_strength: strong
 tags:
-  - relationship/active
-  - {{contextual tags like: relationship/collaborator, relationship/mentor, relationship/friend}}
+  - person/active
+  - {{contextual tags like: person/collaborator, person/mentor, person/friend}}
 important_dates:
   - birthday: 
   - anniversary: 
@@ -25,8 +25,8 @@ communication_preferences:
 {{How you know each other and what bonds you}}
 
 ## Shared Context
-- **Pursuits**: [[Pursuits/{{Name}}]] - {{Working on together}}
-- **Arenas**: [[Arenas/{{Name}}]] - {{Common ground}}
+- **Projects**: [[Projects/{{Name}}]] - {{Working on together}}
+- **Areas**: [[Areas/{{Name}}]] - {{Common ground}}
 - **Interests**: {{What you both enjoy}}
 
 ## Important to Remember
